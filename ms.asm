@@ -1727,7 +1727,6 @@ arr0:
 	int 33h
 
 	pop si
-	;JMP endRevealSquares
 
 	cmp si, 1
 	jne emptysqr1
@@ -1738,6 +1737,8 @@ arr0:
 	call RevealSquares
 	mov si, 11
 	call RevealSquares
+	
+	call Win
 	ret
 emptysqr1:
 	cmp si, 9
@@ -1749,6 +1750,8 @@ emptysqr1:
 	call RevealSquares
 	mov si, 18
 	call RevealSquares
+	
+	call Win
 	ret
 emptysqr2:
 	cmp si, 73
@@ -1760,6 +1763,8 @@ emptysqr2:
 	call RevealSquares
 	mov si, 65
 	call RevealSquares
+	
+	call Win
 	ret
 emptysqr3:
 	cmp si, 81
@@ -1771,6 +1776,8 @@ emptysqr3:
 	call RevealSquares
 	mov si, 72
 	call RevealSquares
+	
+	call Win
 	ret
 emptysqr4:
 	mov ax, si
@@ -1800,6 +1807,8 @@ emptysqr4:
 	add si, 8
 	call RevealSquares
 	pop si
+	
+	call Win
 	ret
 emptysqr5:
 	cmp ah, 1
@@ -1825,6 +1834,8 @@ emptysqr5:
 	add si, 10
 	call RevealSquares
 	pop si
+	
+	call Win
 	ret
 emptysqr6:
 	xor ah, ah
@@ -1854,6 +1865,8 @@ emptysqr6:
 	add si, 10
 	call RevealSquares
 	pop si
+	
+	call Win
 	ret
 emptySqr7:
 	cmp al, 8
@@ -1871,6 +1884,8 @@ emptySqr7:
 	sub si, 10
 	call RevealSquares
 	pop si
+	
+	call Win
 	ret
 emptySqr8:
 	push si
@@ -1897,6 +1912,8 @@ emptySqr8:
 	sub si, 10
 	call RevealSquares
 	pop si
+	
+	call Win
 	ret
 endp RevealSquares
 proc Flagging
